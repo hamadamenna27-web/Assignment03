@@ -4,10 +4,8 @@
 
 namespace Assignment03.Migrations
 {
-    /// <inheritdoc />
     public partial class AddEnrollmentProgressConstraint : Migration
     {
-        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddCheckConstraint(
@@ -16,7 +14,6 @@ namespace Assignment03.Migrations
                 sql: "[Progress] >= 0 AND [Progress] <= 100");
         }
 
-        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropCheckConstraint(
